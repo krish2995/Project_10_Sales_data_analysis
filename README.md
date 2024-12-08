@@ -1,42 +1,96 @@
-# 🔍 Exploratory Data Analysis - An Example
+[![Shipping files](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml/badge.svg?branch=main&event=workflow_dispatch)](https://github.com/neuefische/ds-eda-project-template/actions/workflows/workflow-03.yml)
+# Sales EDA
 
-In this repository, you will work through an example EDA to be prepared for your first EDA project.
+analysis of sales data and produts most sold
 
-## Objective 🎯
+## Requirements
 
-This repository contains an example Exploratory Data Analysis (EDA) on **daily statistics for trending YouTube videos**. You will go through the essential steps of an EDA, including data cleaning, feature engineering, and hypothesis testing.
-
-After completing this code-along, you will have a clear understanding of:
-
-- How to approach an EDA 🔎
-- The individual parts of an EDA 🧩
-- The most commonly used lines of code in EDA 📝
-- How to build and answer hypotheses 💡
-
-
-## Suggested Resources 📚:
-
-- [Pandas Documentation](https://pandas.pydata.org/pandas-docs/stable/)
-- [Seaborn Documentation](https://seaborn.pydata.org/)
-- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
-
-
-
-
-## Task
-
-Please work in groups through the [notebook](https://github.com/neuefische/da-youtube_EDA/blob/main/youtube_EDA.ipynb) and answer the tasks which are included there.
+- pyenv
+- python==3.11.3
 
 ## Setup
 
-For the **Data Analytics** Course: 
-- No setup needed
 
-For the **Data Science** Course:
-- Create a new environment:
+
 ```bash
-python -m venv .venv
-source .venv/bin/activate 
-pip install --upgrade pip
-pip install -r requirements.txt
+pip freeze > requirements.txt
 ```
+
+
+### Unit testing (Optional)
+
+If you write python scripts for your data processing methods, you can also write unit tests. In order to run the tests execute in terminal:
+
+```bash
+pytest
+```
+
+This command will execute all the functions in your project that start with the word **test**.
+
+## Set up your Environment
+This repo contains a requirements.txt file with a list of all the packages and dependencies you will need.
+
+Before you can start with plotly in Jupyter Lab you have to install node.js (if you haven't done it before).
+- Check **Node version**  by run the following commands:
+    ```sh
+    node -v
+    ```
+    If you haven't installed it yet, begin at `step_1`. Otherwise, proceed to `step_2`.
+
+
+### **`macOS`** type the following commands : 
+
+
+- `Step_1:` Update Homebrew and install Node by following commands:
+    ```sh
+    brew update
+    brew install node
+    ```
+
+- `Step_2:` Install the virtual environment and the required packages by following commands:
+
+    ```BASH
+    pyenv local 3.11.3
+    python -m venv .venv
+    source .venv/bin/activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+### **`WindowsOS`** type the following commands :
+
+
+- `Step_1:` Update Chocolatey and install Node by following commands:
+    ```sh
+    choco upgrade chocolatey
+    choco install nodejs
+    ```
+
+- `Step_2:` Install the virtual environment and the required packages by following commands.
+
+   For `PowerShell` CLI :
+
+    ```PowerShell
+    pyenv local 3.11.3
+    python -m venv .venv
+    .venv\Scripts\Activate.ps1
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+
+    For `Git-Bash` CLI :
+  
+    ```BASH
+    pyenv local 3.11.3
+    python -m venv .venv
+    source .venv/Scripts/activate
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
+ 
+
+ **`Note:`**
+    If you encounter an error when trying to run `pip install --upgrade pip`, try using the following command:
+
+   ```Bash
+   python.exe -m pip install --upgrade pip
+   ```
